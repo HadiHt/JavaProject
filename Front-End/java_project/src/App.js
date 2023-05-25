@@ -1,17 +1,20 @@
 import './App.css';
+import Navbar from './components/Navbar/Navbar.tsx';
+import HomePage from './pages/HomePage/HomePage.tsx';
+import { Routes, Route} from "react-router-dom";
+import PlaceToVisit from './pages/PlacesToVisit/PlacesToVisit.tsx';
 
 function App() {
   return (
     <div className="App">
-      <h1>Java Project - Visit Zagreb</h1>
-      <h3>Team:
-        <ul>
-          <li>Iva</li>
-          <li>Tea</li>
-          <li>Hadi</li>
-          <li>Danijel</li>
-        </ul>
-      </h3>
+      <Navbar />
+      <Routes>
+        <Route exact path = "/" element = {<HomePage></HomePage>}></Route>
+        <Route exact path = "/placetovisit" element = {<PlaceToVisit></PlaceToVisit>}></Route>
+        
+
+      </Routes>
+      
     </div>
   );
 }
