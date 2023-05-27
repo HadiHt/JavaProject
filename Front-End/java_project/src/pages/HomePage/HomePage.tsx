@@ -2,11 +2,9 @@ import React, { FC } from "react";
 import styles from "./HomePage.module.css";
 import Navbar from "../../components/Navbar/Navbar.tsx";
 
-interface HomePageProps {}
-
-const HomePage: FC<HomePageProps> = () => (
+const HomePage = () => (
   <div className={styles.HomePage}>
-    HomePage Component
+    Home Page
     <Navbar></Navbar>
   </div>
 );
