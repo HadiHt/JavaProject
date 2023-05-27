@@ -1,4 +1,4 @@
-package hr.tvz.npupjj.npupjjvisitzagreb.Services.DataServices;
+package hr.tvz.npupjj.npupjjvisitzagreb.Services.DataServices.UserServices;
 
 import hr.tvz.npupjj.npupjjvisitzagreb.Models.User;
 
