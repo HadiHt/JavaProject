@@ -5,62 +5,73 @@ import {
   MDBContainer,
   MDBRow,
   MDBCol,
-  MDBIcon,
+  MDBCard,
+  MDBCardBody,
   MDBInput,
+  MDBIcon,
+  MDBCheckbox,
 } from "mdb-react-ui-kit";
+import Layout from "../../components/Layout/Layout.tsx";
+import BannerImage from "../../assets/Podloga.png";
 
 const SignIn = () => (
-  <div className="container">
+  <div className="home" style={{ backgroundImage: `url(${BannerImage})` }}>
     <MDBContainer fluid>
-      <MDBRow>
-        <MDBCol sm="6">
-          <div className="d-flex flex-column justify-content-center h-custom-2 w-75 pt-4">
-            <h3
-              className="fw-normal mb-3 ps-5 pb-3"
-              style={{ letterSpacing: "1px" }}
-            >
-              Log in
-            </h3>
+      <MDBRow className="d-flex justify-content-center align-items-center h-100">
+        <MDBCol col="12">
+          <MDBCard
+            className="bg-white my-5 mx-auto"
+            style={{ borderRadius: "1rem", maxWidth: "500px" }}
+          >
+            <MDBCardBody className="p-5 w-100 d-flex flex-column">
+              <h2 className=" text-center mb-5">Sign in</h2>
+              <p className="text-white-50 mb-3">
+                Please enter your login and password!
+              </p>
 
-            <MDBInput
-              wrapperClass="mb-4 mx-5 w-100"
-              label="Email address"
-              id="formControlLg"
-              type="email"
-              size="lg"
-            />
-            <MDBInput
-              wrapperClass="mb-4 mx-5 w-100"
-              label="Password"
-              id="formControlLg"
-              type="password"
-              size="lg"
-            />
+              <MDBInput
+                wrapperClass="mb-4 w-100"
+                label="Email address"
+                id="formControlLg"
+                type="email"
+                size="lg"
+              />
+              <MDBInput
+                wrapperClass="mb-4 w-100"
+                label="Password"
+                id="formControlLg"
+                type="password"
+                size="lg"
+              />
 
-            <MDBBtn className="mb-4 px-5 mx-5 w-100 primary" size="lg">
-              Login
-            </MDBBtn>
-            <p className="small mb-5 pb-lg-3 ms-5">
-              <a className="text-muted" href="#!">
-                Forgot password?
-              </a>
-            </p>
-            <p className="ms-5">
-              Don't have an account?{" "}
-              <a href="/signup" className="primary">
-                Register here
-              </a>
-            </p>
-          </div>
-        </MDBCol>
+              <MDBCheckbox
+                name="flexCheck"
+                id="flexCheckDefault"
+                className="mb-4"
+                label="Remember password"
+              />
 
-        <MDBCol sm="6" className="d-none d-sm-block px-0">
-          <img
-            src="https://www.visitzagreb.hr/wp-content/uploads/2017/09/Saint-Marks-Church-2-800x500.jpg"
-            alt="Login image"
-            className="w-100 rounded"
-            style={{ objectFit: "cover", objectPosition: "left" }}
-          />
+              <MDBBtn size="lg">Login</MDBBtn>
+
+              <hr className="my-4" />
+
+              <MDBBtn
+                className="mb-2 w-100"
+                style={{ backgroundColor: "#dd4b39" }}
+              >
+                <MDBIcon fab icon="google" className="mx-2" />
+                Sign in with google
+              </MDBBtn>
+
+              <MDBBtn
+                className="mb-4 w-100"
+                style={{ backgroundColor: "#3b5998" }}
+              >
+                <MDBIcon fab icon="facebook-f" className="mx-2" />
+                Sign in with facebook
+              </MDBBtn>
+            </MDBCardBody>
+          </MDBCard>
         </MDBCol>
       </MDBRow>
     </MDBContainer>
