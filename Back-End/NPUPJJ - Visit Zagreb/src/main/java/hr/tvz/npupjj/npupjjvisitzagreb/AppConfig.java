@@ -1,22 +1,13 @@
 package hr.tvz.npupjj.npupjjvisitzagreb;
 
-//@Configuration
-//@ComponentScan("hr.tvz.npupjj.npupjjvisitzagreb.Repositories")
-
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class AppConfig {
-
     @Bean
     public ModelMapper modelMapper() {
         return new ModelMapper();
     }
-/*    @Bean
-    public IUserRepo userRepo() {
-        return new UserRepo() {
-        };
-    }*/
 }

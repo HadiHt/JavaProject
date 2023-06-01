@@ -2,8 +2,6 @@ package hr.tvz.npupjj.npupjjvisitzagreb.Models;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
 import org.springframework.data.annotation.Id;
 
