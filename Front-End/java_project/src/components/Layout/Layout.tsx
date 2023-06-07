@@ -10,7 +10,6 @@ const Layout: FC<PropsWithChildren> = ({ children }) => (
       height: "100vh",
       width: "100%",
       padding: "200px 100px",
-      justifyContent: "space-between",
     }}
   >
     {children}

@@ -54,19 +54,32 @@ const HomePage = () => (
             borderRadius: 40,
             background: "rgba(255, 252, 235, 0.9)",
             opacity: 0.9,
-            border: "solid 2px",
+            border: "solid 1.5px",
           }}
         >
           <Card.Body>
             <Card.Title
               style={{
                 fontWeight: 700,
+                fontSize: "28px",
+                lineHeight: "41px",
+                textAlign: "center",
+                color: "#000000",
               }}
             >
               Place to visit
               <hr />
             </Card.Title>
-            <Card.Text>
+            <Card.Text
+              style={{
+                fontFamily: "Inter",
+                fontStyle: "normal",
+                fontWeight: "400",
+                fontSize: "15px",
+                lineHeight: "19px",
+                textAlign: "left",
+              }}
+            >
               Explore the best of Zagreb! From historic landmarks to trendy
               neighborhoods, find out what to see in Zagreb with our 2023
               attractions guide.
@@ -81,7 +94,7 @@ const HomePage = () => (
             borderRadius: 40,
             backgroundColor: "rgba(255, 252, 235, 0.9)",
             opacity: 0.9,
-            border: "solid 2px",
+            border: "solid 1.5px",
             filter: "blur",
           }}
         >
@@ -89,15 +102,28 @@ const HomePage = () => (
             <Card.Title
               style={{
                 fontWeight: 700,
+                fontSize: "28px",
+                lineHeight: "41px",
+                textAlign: "center",
+                color: "#000000",
               }}
             >
-              Place to visit
+              Public transport
               <hr />
             </Card.Title>
-            <Card.Text>
-              Explore the best of Zagreb! From historic landmarks to trendy
-              neighborhoods, find out what to see in Zagreb with our 2023
-              attractions guide.
+            <Card.Text
+              style={{
+                fontFamily: "Inter",
+                fontStyle: "normal",
+                fontWeight: "400",
+                fontSize: "15px",
+                lineHeight: "19px",
+                textAlign: "left",
+              }}
+            >
+              Zagreb's public transportation system is called ZET. It is
+              abbreviated from Zagrebački električni tramvaj (Zagreb electric
+              tram).
             </Card.Text>
           </Card.Body>
         </Card>
@@ -109,7 +135,7 @@ const HomePage = () => (
             borderRadius: 40,
             backgroundColor: "rgba(255, 252, 235, 0.9)",
             opacity: 0.9,
-            border: "solid 2px",
+            border: "solid 1.5px",
             filter: "blur",
           }}
         >
@@ -117,15 +143,27 @@ const HomePage = () => (
             <Card.Title
               style={{
                 fontWeight: 700,
+                fontSize: "28px",
+                lineHeight: "41px",
+                textAlign: "center",
+                color: "#000000",
               }}
             >
-              Place to visit
+              Place to eat
               <hr />
             </Card.Title>
-            <Card.Text>
-              Explore the best of Zagreb! From historic landmarks to trendy
-              neighborhoods, find out what to see in Zagreb with our 2023
-              attractions guide.
+            <Card.Text
+              style={{
+                fontFamily: "Inter",
+                fontStyle: "normal",
+                fontWeight: "400",
+                fontSize: "15px",
+                lineHeight: "19px",
+                textAlign: "left",
+              }}
+            >
+              The best Zagreb restaurants: our guide on where to eat in Zagreb
+              for every budget and lifestyle, including locals favourite places.
             </Card.Text>
           </Card.Body>
         </Card>
@@ -137,7 +175,7 @@ const HomePage = () => (
             borderRadius: 40,
             backgroundColor: "rgba(255, 252, 235, 0.9)",
             opacity: 0.9,
-            border: "solid 2px",
+            border: "solid 1.5px",
             filter: "blur",
           }}
         >
@@ -145,15 +183,27 @@ const HomePage = () => (
             <Card.Title
               style={{
                 fontWeight: 700,
+                fontSize: "28px",
+                lineHeight: "41px",
+                textAlign: "center",
+                color: "#000000",
               }}
             >
-              Place to visit
+              Place to stay
               <hr />
             </Card.Title>
-            <Card.Text>
-              Explore the best of Zagreb! From historic landmarks to trendy
-              neighborhoods, find out what to see in Zagreb with our 2023
-              attractions guide.
+            <Card.Text
+              style={{
+                fontFamily: "Inter",
+                fontStyle: "normal",
+                fontWeight: "400",
+                fontSize: "15px",
+                lineHeight: "19px",
+                textAlign: "left",
+              }}
+            >
+              Discover place zo stay at Visit Zagreb and make your next stay
+              truly unique! Escape to anywhere, anytime on Visit Zagreb!
             </Card.Text>
           </Card.Body>
         </Card>
