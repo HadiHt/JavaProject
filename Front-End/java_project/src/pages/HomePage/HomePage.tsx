@@ -7,7 +7,15 @@ import Button from "react-bootstrap/Button";
 import Rectangle from "../../assets/Rectangle 9.png";
 
 const HomePage = () => (
-  <div className="home" style={{ backgroundImage: `url(${BannerImage})` }}>
+  <div
+    className="home"
+    style={{
+      backgroundImage: `url(${BannerImage})`,
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundAttachment: "fixed",
+    }}
+  >
     <div
       style={{
         display: "flex",

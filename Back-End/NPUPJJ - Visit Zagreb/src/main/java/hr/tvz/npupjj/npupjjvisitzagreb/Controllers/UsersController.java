@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/User")
+@CrossOrigin(origins = "http://localhost:4200")
 public class UsersController {
     UserService userService;
     UserMapper mapper;
@@ -29,9 +30,15 @@ public class UsersController {
         return null;
     }
     @GetMapping("/User/{id}")
-    public ResponseEntity<UserReadDto> getUser(@PathVariable Long id){
+    public ResponseEntity<UserReadDto> getUserByID(@PathVariable Long id){
         User userToSend = userService.getUserById(id);
         UserReadDto user = mapper.mapUserToUserReadDto(userToSend);
         return new ResponseEntity<>(user, HttpStatus.OK);
+    }
+    @GetMapping("/User")
+    public ResponseEntity<UserReadDto> getUserByCredentials(@RequestBody UserWriteDto user){
+        User userToSend = userService.getUserByCredentials(user.getEmail());
+        UserReadDto loginUser = mapper.mapUserToUserReadDto(userToSend);
+        return new ResponseEntity<>(loginUser, HttpStatus.OK);
     }
 }

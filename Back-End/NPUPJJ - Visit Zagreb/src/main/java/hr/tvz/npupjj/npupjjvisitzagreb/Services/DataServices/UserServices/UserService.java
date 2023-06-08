@@ -28,4 +28,7 @@ public UserService(IUserRepo userRepo){
         return userRepo.findById(id).orElseThrow(()
                 -> new UserNotFoundException("User by id: " + id + " was not found."));
     }
+    public User getUserByCredentials(String email){
+        return userRepo.findByEmail(email);
+    }
 }

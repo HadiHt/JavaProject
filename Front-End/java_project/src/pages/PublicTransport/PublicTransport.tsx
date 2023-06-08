@@ -16,12 +16,21 @@ import BannerImage from "../../assets/Podloga.png";
 import "./PublicTransport.css";
 
 const PublicTransport = () => (
-  <div className="home" style={{ backgroundImage: `url(${BannerImage})` }}>
+  <div
+    className="home"
+    style={{
+      backgroundImage: `url(${BannerImage})`,
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundAttachment: "fixed",
+      zIndex: 100,
+    }}
+  >
     <Layout>
       <div className="container">
         <div className="row">
           <div className="col">
-            <div className="box">
+            <div className="box" style={{ zIndex: "0 !important" }}>
               <h1>
                 Public transport in Zagreb <img src={Blue_Car}></img>
               </h1>
