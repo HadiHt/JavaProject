@@ -1,10 +1,13 @@
-.inputContainersignUp{
+.inputContainer{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 200px;
+    height: 100px;
     margin-bottom: 20px;
 }
-.inputContainersignUp>*{
+.inputContainer>*{
     height: 35px;
+}
+.firstName{
+    margin: 0;
 }

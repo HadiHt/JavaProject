@@ -35,10 +35,19 @@ public class UsersController {
         UserReadDto user = mapper.mapUserToUserReadDto(userToSend);
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
-    @GetMapping("/User")
+    @PostMapping("/User")
     public ResponseEntity<UserReadDto> getUserByCredentials(@RequestBody UserWriteDto user){
-        User userToSend = userService.getUserByCredentials(user.getEmail());
-        UserReadDto loginUser = mapper.mapUserToUserReadDto(userToSend);
-        return new ResponseEntity<>(loginUser, HttpStatus.OK);
+        try {
+            User userToSend = userService.getUserByCredentials(user.getEmail());
+            UserReadDto loginUser = mapper.mapUserToUserReadDto(userToSend);
+            if(user.getPassword().equals(userToSend.getPassword())){
+                return new ResponseEntity<>(loginUser, HttpStatus.OK);
+            }
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        catch(Exception ex){
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+
     }
 }
