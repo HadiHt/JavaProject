@@ -29,6 +29,7 @@ const PlacesToEat = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [time, setTime] = useState("");
   const [numberOfPeople, setNumberOfPeople] = useState("");
+  const [place, setPlace] = useState("");
 
   const optionsPeople = [
     "1 person",
@@ -46,6 +47,14 @@ const PlacesToEat = () => {
     "5-7 PM",
     "7-9 PM",
     "9-11PM",
+  ];
+
+  const restourants = [
+    "Pod Zidom Bistro",
+    "Torikaya Ramen Bar",
+    "Sopal",
+    "SOI Fusion Bar",
+    "Konoba Luka",
   ];
 
   const handleTime = (event) => {
@@ -113,7 +122,17 @@ const PlacesToEat = () => {
               aria-label="First group"
             >
               <InputGroup className="me-5 " style={{ paddingLeft: "200px" }}>
-                <InputGroup.Text id="btnGroupAddon">
+                <InputGroup.Text
+                  id="btnGroupAddon"
+                  style={{
+                    width: 240,
+                    height: 50,
+                    borderRadius: 10,
+                    background: "#FFFFFF",
+                    paddingLeft: 10,
+                    border: "2px solid #FFDF00",
+                  }}
+                >
                   <CalendarMonthIcon></CalendarMonthIcon>
                   <DatePicker
                     selected={startDate}
@@ -122,9 +141,32 @@ const PlacesToEat = () => {
                 </InputGroup.Text>
               </InputGroup>
               <InputGroup className="me-5">
-                <InputGroup.Text id="btnGroupAddon">
-                  <AccessTimeIcon></AccessTimeIcon>
-                  <select onChange={handleTime}>
+                <InputGroup.Text
+                  id="btnGroupAddon"
+                  style={{
+                    width: 240,
+                    height: 50,
+                    borderRadius: 10,
+                    background: "#FFFFFF",
+                    padding: "6px, 50px, 60px, 150px",
+                    border: "2px solid #FFDF00",
+                    fontFamily: "Inter",
+                    fontStyle: "normal",
+                    boxShadow: "none",
+                  }}
+                >
+                  <AccessTimeIcon style={{ padding: "0px" }}></AccessTimeIcon>
+                  <select
+                    onChange={handleTime}
+                    style={{
+                      height: "35px",
+                      width: "190px",
+                      padding: "5px",
+                      borderRadius: 10,
+                      border: "#FFFFFF",
+                      fontSize: "18px",
+                    }}
+                  >
                     <option value="">Select an option</option>
                     <option value={options[0]}>{options[0]}</option>
                     <option value={options[1]}>{options[1]}</option>
@@ -137,9 +179,32 @@ const PlacesToEat = () => {
                 </InputGroup.Text>
               </InputGroup>
               <InputGroup className="me-5">
-                <InputGroup.Text id="btnGroupAddon">
+                <InputGroup.Text
+                  style={{
+                    width: 240,
+                    height: 50,
+                    borderRadius: 10,
+                    background: "#FFFFFF",
+                    padding: "6px, 50px, 60px, 150px",
+                    border: "2px solid #FFDF00",
+                    fontFamily: "Inter",
+                    fontStyle: "normal",
+                    boxShadow: "none",
+                  }}
+                  id="btnGroupAddon"
+                >
                   <PeopleOutlineIcon></PeopleOutlineIcon>
-                  <select onChange={handleNumberOfPeople}>
+                  <select
+                    onChange={handleNumberOfPeople}
+                    style={{
+                      height: "35px",
+                      width: "190px",
+                      padding: "5px",
+                      borderRadius: 10,
+                      border: "#FFFFFF",
+                      fontSize: "18px",
+                    }}
+                  >
                     <option value="">Select an option</option>
                     <option value={optionsPeople[0]}>{optionsPeople[0]}</option>
                     <option value={optionsPeople[1]}>{optionsPeople[1]}</option>
@@ -150,19 +215,57 @@ const PlacesToEat = () => {
                 </InputGroup.Text>
               </InputGroup>
               <InputGroup>
-                <InputGroup.Text id="btnGroupAddon">
+                <InputGroup.Text
+                  style={{
+                    width: 240,
+                    height: 50,
+                    borderRadius: 10,
+                    background: "#FFFFFF",
+                    padding: "6px, 50px, 60px, 150px",
+                    border: "2px solid #FFDF00",
+                    fontFamily: "Inter",
+                    fontStyle: "normal",
+                    boxShadow: "none",
+                  }}
+                  id="btnGroupAddon"
+                >
                   <SearchIcon></SearchIcon>
+                  <select
+                    onChange={handleNumberOfPeople}
+                    style={{
+                      height: "35px",
+                      width: "190px",
+                      padding: "5px",
+                      borderRadius: 10,
+                      border: "#FFFFFF",
+                      fontSize: "18px",
+                    }}
+                  >
+                    <option value="">Restaurant</option>
+                    <option value={restourants[0]}>{restourants[0]}</option>
+                    <option value={restourants[1]}>{restourants[1]}</option>
+                    <option value={restourants[2]}>{restourants[2]}</option>
+                    <option value={restourants[3]}>{restourants[3]}</option>
+                    <option value={restourants[4]}>{restourants[4]}</option>
+                  </select>
                 </InputGroup.Text>
-                <Form.Control
-                  type="text"
-                  placeholder="Choose a Date"
-                  aria-label="Input group example"
-                  aria-describedby="btnGroupAddon"
-                />
               </InputGroup>
             </ButtonGroup>
           </ButtonToolbar>
-          <Button className="my-4" size="lg" variant="primary">
+          <Button
+            className="my-4"
+            size="lg"
+            style={{
+              height: "45px",
+              width: "8rem",
+              fontFamily: "Inter",
+              fontStyle: "normal",
+              fontSize: "18px",
+              padding: "7px",
+              background: "#0BA6FF",
+              borderRadius: "20px",
+            }}
+          >
             Let's go
           </Button>
         </div>
@@ -282,7 +385,7 @@ const PlacesToEat = () => {
                     borderRadius: "10px",
                   }}
                 >
-                  5:30 PM
+                  5 - 7 PM
                 </div>
                 &nbsp;
                 <div
@@ -297,7 +400,7 @@ const PlacesToEat = () => {
                     borderRadius: "10px",
                   }}
                 >
-                  5:45 PM
+                  7 - 9 PM
                 </div>
                 &nbsp;
                 <div
@@ -312,7 +415,7 @@ const PlacesToEat = () => {
                     borderRadius: "10px",
                   }}
                 >
-                  6:00 PM
+                  9 - 11 PM
                 </div>
                 <div
                   style={{
@@ -422,7 +525,7 @@ const PlacesToEat = () => {
                     borderRadius: "10px",
                   }}
                 >
-                  5:15 PM
+                  3 - 5 PM
                 </div>
                 &nbsp;
                 <div
@@ -437,7 +540,7 @@ const PlacesToEat = () => {
                     borderRadius: "10px",
                   }}
                 >
-                  7:00 PM
+                  5 - 7 PM
                 </div>
                 &nbsp;
                 <div
@@ -452,7 +555,7 @@ const PlacesToEat = () => {
                     borderRadius: "10px",
                   }}
                 >
-                  7:30 PM
+                  7 - 9 PM
                 </div>
                 <div
                   style={{
@@ -561,7 +664,7 @@ const PlacesToEat = () => {
                     borderRadius: "10px",
                   }}
                 >
-                  5:45 PM
+                  3 - 5 PM
                 </div>
                 &nbsp;
                 <div
@@ -576,7 +679,7 @@ const PlacesToEat = () => {
                     borderRadius: "10px",
                   }}
                 >
-                  8:00 PM
+                  7 - 9 PM
                 </div>
                 &nbsp;
                 <div
@@ -591,7 +694,7 @@ const PlacesToEat = () => {
                     borderRadius: "10px",
                   }}
                 >
-                  8:30 PM
+                  9 - 11 PM
                 </div>
                 <div
                   style={{
@@ -701,7 +804,7 @@ const PlacesToEat = () => {
                     borderRadius: "10px",
                   }}
                 >
-                  6:00 PM
+                  5 - 7 PM
                 </div>
                 &nbsp;
                 <div
@@ -716,7 +819,7 @@ const PlacesToEat = () => {
                     borderRadius: "10px",
                   }}
                 >
-                  6:45 PM
+                  7 - 9 PM
                 </div>
                 &nbsp;
                 <div
@@ -731,7 +834,7 @@ const PlacesToEat = () => {
                     borderRadius: "10px",
                   }}
                 >
-                  7:15 PM
+                  9 - 11 PM
                 </div>
                 <div
                   style={{

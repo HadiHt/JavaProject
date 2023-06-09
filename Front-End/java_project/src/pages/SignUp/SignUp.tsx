@@ -56,10 +56,54 @@ const SignUp = () => {
           <MDBCardBody className="px-5">
             <h2 className="text-center mb-5">Create an account</h2>
             <div className="inputContainersignUp">
-              <input id="form1" type="text" placeholder="Your Name" />
-              <input id="form2" type="text" placeholder="Your Email" />
-              <input id="form3" type="text" placeholder="Your Password" />
-              <input id="form4" type="text" placeholder="Repeat Password" />
+              <input
+                style={{
+                  width: 400,
+                  height: 45,
+                  borderRadius: 10,
+                  border: "solid 1px",
+                  paddingLeft: 10,
+                }}
+                id="form1"
+                type="text"
+                placeholder="Your Name"
+              />
+              <input
+                style={{
+                  width: 400,
+                  height: 45,
+                  borderRadius: 10,
+                  border: "solid 1px",
+                  paddingLeft: 10,
+                }}
+                id="form2"
+                type="text"
+                placeholder="Your Email"
+              />
+              <input
+                style={{
+                  width: 400,
+                  height: 45,
+                  borderRadius: 10,
+                  border: "solid 1px",
+                  paddingLeft: 10,
+                }}
+                id="form3"
+                type="text"
+                placeholder="Your Password"
+              />
+              <input
+                style={{
+                  width: 400,
+                  height: 45,
+                  borderRadius: 10,
+                  border: "solid 1px",
+                  paddingLeft: 10,
+                }}
+                id="form4"
+                type="text"
+                placeholder="Repeat Password"
+              />
             </div>
             <div className="d-flex flex-row justify-content-center mb-4"></div>
             <MDBBtn

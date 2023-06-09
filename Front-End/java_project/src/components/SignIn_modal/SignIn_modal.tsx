@@ -66,7 +66,17 @@ const SignIn_modal = () => {
       <Button variant="dark mx-1" onClick={handleShow}>
         <i>
           {!isLoggedIn && <AccountCircleOutlinedIcon />}
-          {isLoggedIn && <p className="firstName">{user.firstName}</p>}
+          {isLoggedIn && (
+            <p
+              style={{
+                fontFamily: "Inter",
+                fontStyle: "normal",
+              }}
+              className="firstName"
+            >
+              {user.firstName}
+            </p>
+          )}
         </i>
       </Button>
       <Modal
@@ -107,8 +117,26 @@ const SignIn_modal = () => {
                       Please enter your login and password!
                     </p>
                     <div className="inputContainer">
-                      <input id="form5" type="text" placeholder="Your Email" />
                       <input
+                        style={{
+                          width: 400,
+                          height: 45,
+                          borderRadius: 10,
+                          border: "solid 1px",
+                          paddingLeft: 10,
+                        }}
+                        id="form5"
+                        type="text"
+                        placeholder="Your Email"
+                      />
+                      <input
+                        style={{
+                          width: 400,
+                          height: 45,
+                          borderRadius: 10,
+                          border: "solid 1px",
+                          paddingLeft: 10,
+                        }}
                         id="form6"
                         type="text"
                         placeholder="Your Password"
@@ -121,7 +149,15 @@ const SignIn_modal = () => {
                       label="Remember password"
                     />
                     {!emailUncorrect && (
-                      <div className="textColor: red">
+                      <div
+                        style={{
+                          color: "red",
+                          fontFamily: "Inter",
+                          fontStyle: "normal",
+                          fontSize: "18px",
+                          padding: "10px",
+                        }}
+                      >
                         Uncorrect Credentials
                       </div>
                     )}
@@ -134,7 +170,6 @@ const SignIn_modal = () => {
                       style={{
                         marginTop: 25,
                         paddingTop: 0,
-                        position: "right",
                       }}
                     >
                       Close
