@@ -42,6 +42,12 @@ public class RestaurantsController {
         restaurantService.saveRestaurant(restaurantReceived);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
+    @GetMapping("/Restaurants")
+    public ResponseEntity<List<RestaurantReadDto>> getAllRestaurant(){
+        List<Restaurant> restaurantsToSend = restaurantService.getAllRestaurants();
+        List<RestaurantReadDto> restaurant = restaurantMapper.mapListRestaurantToListRestaurantReadDto(restaurantsToSend);
+        return new ResponseEntity<>(restaurant, HttpStatus.OK);
+    }
     @GetMapping("/Restaurant/{id}")
     public ResponseEntity<RestaurantReadDto> getRestaurant(@PathVariable Long id){
         Restaurant restaurantToSend = restaurantService.getRestaurantById(id);

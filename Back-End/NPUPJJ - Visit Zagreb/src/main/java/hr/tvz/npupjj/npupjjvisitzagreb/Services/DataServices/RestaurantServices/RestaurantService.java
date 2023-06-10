@@ -27,6 +27,10 @@ public class RestaurantService{
     }
 
     public List<Restaurant> getAllRestaurants() {
-        return null;
+        List<Restaurant> allRestaurants = (List<Restaurant>) restaurantRepo.findAll();
+        if (allRestaurants == null){
+            throw new RuntimeException("No Restaurants");
+        }
+        return allRestaurants;
     }
 }
