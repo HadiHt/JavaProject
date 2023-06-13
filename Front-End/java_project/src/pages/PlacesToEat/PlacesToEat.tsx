@@ -32,7 +32,7 @@ const PlacesToEat = () => {
   const [place, setPlace] = useState("");
 
   const optionsPeople = [
-    "1 person",
+    "1 person", // split the translated array
     "2 people",
     "3 people",
     "4 people",
