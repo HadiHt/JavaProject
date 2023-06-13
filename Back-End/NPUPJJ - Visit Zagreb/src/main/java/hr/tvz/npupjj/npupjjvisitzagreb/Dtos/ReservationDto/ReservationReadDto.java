@@ -4,8 +4,7 @@ import hr.tvz.npupjj.npupjjvisitzagreb.Dtos.RestaurantDto.RestaurantReadDto;
 import hr.tvz.npupjj.npupjjvisitzagreb.Dtos.UserDto.UserReadDto;
 import hr.tvz.npupjj.npupjjvisitzagreb.Models.Restaurant;
 import hr.tvz.npupjj.npupjjvisitzagreb.Models.User;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+
 
 public class ReservationReadDto {
     private String time;

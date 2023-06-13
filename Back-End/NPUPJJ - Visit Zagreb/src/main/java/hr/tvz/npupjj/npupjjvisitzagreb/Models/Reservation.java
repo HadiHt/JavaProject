@@ -1,6 +1,6 @@
 package hr.tvz.npupjj.npupjjvisitzagreb.Models;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
 
