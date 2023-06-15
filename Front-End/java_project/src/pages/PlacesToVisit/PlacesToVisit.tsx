@@ -13,7 +13,16 @@ import TSZ_3 from "../../assets/TSZ_3.png";
 import TSZ_4 from "../../assets/TSZ_4.png";
 
 const PlacesToVisit = () => (
-  <div className="home" style={{ backgroundImage: `url(${BannerImage})` }}>
+  <div
+    className="home"
+    style={{
+      backgroundImage: `url(${BannerImage})`,
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundAttachment: "fixed",
+      zIndex: 100,
+    }}
+  >
     <Layout>
       <div
         style={{
