@@ -16,6 +16,17 @@ const PlacesToStay = () => {
 
   return(
   <div className="home" style={{ backgroundImage: `url(${BannerImage})` }}>
+const PlacesToStay = () => (
+  <div
+    className="home"
+    style={{
+      backgroundImage: `url(${BannerImage})`,
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundAttachment: "fixed",
+      zIndex: 100,
+    }}
+  >
     <Layout>
       <div
         style={{
