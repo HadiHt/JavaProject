@@ -1,9 +1,18 @@
 package hr.tvz.npupjj.npupjjvisitzagreb.Dtos.RestaurantDto;
 
 public class RestaurantReadDto {
+    private long id;
     private String name;
     private String address;
     private Boolean isReserved;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

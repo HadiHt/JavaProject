@@ -3,6 +3,7 @@ package hr.tvz.npupjj.npupjjvisitzagreb.Dtos.UserDto;
 import java.io.Serializable;
 
 public class UserReadDto implements Serializable {
+    private long id;
     private String firstName;
     private String lastName;
     private String email;
@@ -14,6 +15,14 @@ public class UserReadDto implements Serializable {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public void setFirstName(String firstName) {
