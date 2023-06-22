@@ -25,6 +25,8 @@ import "react-dropdown/style.css";
 import { getValue } from "@testing-library/user-event/dist/utils";
 import { DropdownComponent } from "dropdown-ii";
 import { useTranslation } from "react-i18next";
+import axios from "axios";
+import cookies from "js-cookie";
 
 const PlacesToEat = () => {
   const { t } = useTranslation();
@@ -32,8 +34,51 @@ const PlacesToEat = () => {
   const [time, setTime] = useState("");
   const [numberOfPeople, setNumberOfPeople] = useState("");
   const [place, setPlace] = useState("");
-  
-  const optionPeople1 = t("eat.optionPeople1");    {t("eat.title1")}
+  const [restaurant, setRestaurant] = useState();
+
+  useEffect(() => {
+    const GetRestaurants = async () => {
+      const headers = {
+        Authorization: "Bearer " + cookies.get("token"),
+        "Access-Control-Allow-Origin": "http://localhost:8080",
+        "Access-Control-Allow-Headers": "*",
+      };
+      const restCall = await axios
+        .get("http://localhost:8080/Restaurant/Restaurants", { headers })
+        .then((res) => {
+          console.log(res.data);
+          setRestaurant(res.data);
+        })
+        .catch((err) => console.log(err));
+    };
+    GetRestaurants();
+  }, []);
+
+  useEffect(() => {
+    const GetReservation = async () => {
+      const id = place.split(".");
+      const body = { startDate };
+      const headers = {
+        Authorization: "Bearer " + cookies.get("token"),
+        "Access-Control-Allow-Origin": "http://localhost:8080",
+        "Access-Control-Allow-Headers": "*",
+      };
+      const restCall = await axios
+        .post("http://localhost:8080/Restaurant/Reservations/" + id, body, {
+          headers,
+        })
+        .then((res) => {
+          console.log(res.data);
+        })
+        .catch((err) => console.log(err));
+    };
+    GetReservation();
+  }, [startDate]);
+
+  const optionPeople1 = t("eat.optionPeople1");
+  {
+    t("eat.title1");
+  }
   const optionPeople2 = t("eat.optionPeople2");
   const optionPeople3 = t("eat.optionPeople3");
   const optionPeople4 = t("eat.optionPeople4");
@@ -50,7 +95,6 @@ const PlacesToEat = () => {
   const optionRestaurant3 = t("eat.optionRestaurant3");
   const optionRestaurant4 = t("eat.optionRestaurant4");
   const optionRestaurant5 = t("eat.optionRestaurant5");
-    
 
   const optionsPeople = [
     optionPeople1, // split the translated array
@@ -85,12 +129,10 @@ const PlacesToEat = () => {
     setNumberOfPeople(event.target.value);
   };
 
-  useEffect(() => {
-    console.log({ time });
-    console.log({ startDate });
-    console.log({ numberOfPeople });
-  }); 
- 
+  const handlePlace = (event) => {
+    setPlace(event.target.value);
+  };
+
   return (
     <div
       className="home"
@@ -262,7 +304,7 @@ const PlacesToEat = () => {
                 >
                   <SearchIcon></SearchIcon>
                   <select
-                    onChange={handleNumberOfPeople}
+                    onChange={handlePlace}
                     style={{
                       height: "35px",
                       width: "190px",
@@ -320,9 +362,7 @@ const PlacesToEat = () => {
           >
             {t("eat.title3")}
           </p>
-          <p>
-          {t("eat.text1")}
-          </p>
+          <p>{t("eat.text1")}</p>
 
           <p
             style={{

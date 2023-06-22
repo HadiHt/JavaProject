@@ -25,7 +25,6 @@ const SignIn_modal = () => {
   const [isLoggedIn, SetIsLoggedIn] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [token, setToken] = useState(""); //
   const [emailUncorrect, setEmailUncorrect] = useState(true);
   const getValue = () => {
     var inputElement = document.getElementById("form5") as HTMLInputElement;
@@ -51,7 +50,8 @@ const SignIn_modal = () => {
             console.log(emailUncorrect);
             setShow(!show);
             //cokies
-            //cookies.set("token", "tokenValue", { expires: 1 });
+            cookies.set("token", res.data.token, { expires: 1 });
+            console.log(cookies.get("token"));
           } else {
             setEmailUncorrect(false);
             console.log(emailUncorrect);

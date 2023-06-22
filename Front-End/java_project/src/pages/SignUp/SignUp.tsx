@@ -126,6 +126,7 @@ const SignUp = () => {
               className="mb-4 w-100 gradient-custom-4"
               size="lg"
               onClick={getValue}
+              href="/"
             >
               {t("signUp1")}
             </MDBBtn>
