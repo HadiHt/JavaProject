@@ -14,39 +14,35 @@ import i18n from "./i18n";
 function App() {
   return (
     <I18nextProvider i18n={i18n}>
-    <div className="App">
-      <ContextWrapper>
-        <Navbar_ />
-        <Routes>
-          <Route exact path="/" element={<HomePage></HomePage>}></Route>
-          <Route
-            exact
-            path="/placetovisit"
-            element={<PlaceToVisit></PlaceToVisit>}
-          ></Route>
-          <Route
-            exact
-            path="/placestoeat"
-            element={<PlacesToEat></PlacesToEat>}
-          ></Route>
-          <Route
-            exact
-            path="/placestostay"
-            element={<PlacesToStay></PlacesToStay>}
-          ></Route>
-          <Route
-            exact
-            path="/publictransport"
-            element={<PublicTransport></PublicTransport>}
-          ></Route>
-          <Route 
-            exact 
-            path="/signup" 
-            element={<SignUp></SignUp>}>
-          </Route>
-        </Routes>
-      </ContextWrapper>
-    </div>
+      <div className="App">
+        <ContextWrapper>
+          <Navbar_ />
+          <Routes>
+            <Route exact path="/" element={<HomePage></HomePage>}></Route>
+            <Route
+              exact
+              path="/placetovisit"
+              element={<PlaceToVisit></PlaceToVisit>}
+            ></Route>
+            <Route
+              exact
+              path="/placestoeat"
+              element={<PlacesToEat></PlacesToEat>}
+            ></Route>
+            <Route
+              exact
+              path="/placestostay"
+              element={<PlacesToStay></PlacesToStay>}
+            ></Route>
+            <Route
+              exact
+              path="/publictransport"
+              element={<PublicTransport></PublicTransport>}
+            ></Route>
+            <Route exact path="/signup" element={<SignUp></SignUp>}></Route>
+          </Routes>
+        </ContextWrapper>
+      </div>
     </I18nextProvider>
   );
 }

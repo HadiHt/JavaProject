@@ -46,14 +46,12 @@ const SignIn_modal = () => {
           if (res.data != "") {
             setEmailUncorrect(true);
             setUser(res.data);
-            setToken(res.data); //
             SetIsLoggedIn(true);
             console.log(user);
             console.log(emailUncorrect);
             setShow(!show);
             //cokies
             //cookies.set("token", "tokenValue", { expires: 1 });
-            console.log(res.data);
           } else {
             setEmailUncorrect(false);
             console.log(emailUncorrect);

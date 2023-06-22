@@ -26,39 +26,39 @@ function Navbar_() {
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0 justify-content-center "
-            style={{ maxHeight: "100px" }}
+            style={{ maxHeight: "100px" ,textDecoration: "none" }}
             navbarScroll
           >
-            <Nav.Link
-              href="/placetovisit"
+            <Link
+              to="/placetovisit"
               className="mx-4"
-              style={{ fontSize: 20, color: "black", fontWeight: "bold" }}
+              style={{ fontSize: 20, color: "black", fontWeight: "bold", textDecoration: "none" }}
             >
              {t("places.to.visit")}
-            </Nav.Link>
+            </Link>
 
-            <Nav.Link
-              href="/publictransport"
+            <Link to="/publictransport"
+
               className="mx-4"
-              style={{ fontSize: 20, color: "black", fontWeight: "bold" }}
+              style={{ fontSize: 20, color: "black", fontWeight: "bold", textDecoration: "none" }}
             >
               {t("public.transportation")}
-            </Nav.Link>
+            </Link>
 
-            <Nav.Link
-              href="/placestoeat"
+            <Link
+              to="/placestoeat"
               className="mx-4"
-              style={{ fontSize: 20, color: "black", fontWeight: "bold" }}
+              style={{ fontSize: 20, color: "black", fontWeight: "bold", textDecoration: "none" }}
             >
               {t("places.to.eat")}
-            </Nav.Link>
-            <Nav.Link
-              href="/placestostay"
+            </Link>
+            <Link
+              to="/placestostay"
               className="mx-4"
-              style={{ fontSize: 20, color: "black", fontWeight: "bold" }}
+              style={{ fontSize: 20, color: "black", fontWeight: "bold", textDecoration: "none" }}
             >
               {t("places.to.stay")}
-            </Nav.Link>
+            </Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
