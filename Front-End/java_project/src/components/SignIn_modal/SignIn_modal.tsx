@@ -17,6 +17,7 @@ import {
   MDBCol,
   MDBIcon,
 } from "mdb-react-ui-kit";
+import cookies from "js-cookie";
 
 const SignIn_modal = () => {
   const { t } = useTranslation();
@@ -50,6 +51,9 @@ const SignIn_modal = () => {
             console.log(user);
             console.log(emailUncorrect);
             setShow(!show);
+            //cokies
+            //cookies.set("token", "tokenValue", { expires: 1 });
+            console.log(res.data);
           } else {
             setEmailUncorrect(false);
             console.log(emailUncorrect);
@@ -116,9 +120,7 @@ const SignIn_modal = () => {
                       style={{ float: "right" }}
                     ></button>
                     <h2 className=" text-center mb-5">{t("signIn1")}</h2>
-                    <p className="text-white-50 mb-3">
-                    {t("signUp6")}
-                    </p>
+                    <p className="text-white-50 mb-3">{t("signUp6")}</p>
                     <div className="inputContainer">
                       <input
                         style={{
@@ -165,7 +167,7 @@ const SignIn_modal = () => {
                       </div>
                     )}
                     <MDBBtn size="lg" onClick={getValue}>
-                    {t("signIn3")}
+                      {t("signIn3")}
                     </MDBBtn>
                     <Button
                       variant="outline-dark"

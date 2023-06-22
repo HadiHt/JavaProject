@@ -16,370 +16,369 @@ import { useTranslation } from "react-i18next";
 const PlacesToVisit = () => {
   const { t } = useTranslation();
 
-  return(
-  <div className="home" style={{ backgroundImage: `url(${BannerImage})` }}>
-const PlacesToVisit = () => (
-  <div
-    className="home"
-    style={{
-      backgroundImage: `url(${BannerImage})`,
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-      backgroundAttachment: "fixed",
-      zIndex: 100,
-    }}
-  >
-    <Layout>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "flex-start",
-          alignItems: "flex-start",
-          maxWidth: "1800px",
-          textAlign: "left",
-        }}
-      >
-        <p
+  return (
+    <div
+      className="home"
+      style={{
+        backgroundImage: `url(${BannerImage})`,
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+        zIndex: 100,
+      }}
+    >
+      <Layout>
+        <div
           style={{
-            fontWeight: 700,
-            fontSize: "40px",
-            lineHeight: "48px",
-            paddingLeft: "0px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-start",
+            alignItems: "flex-start",
+            maxWidth: "1800px",
+            textAlign: "left",
           }}
         >
-          {t("places.to.visit1")}
-        </p>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "flex-start",
-          maxWidth: "1800px",
-          textAlign: "center",
-          padding: "0px 0px",
-        }}
-      >
-        <Card
-          className="me-4"
-          style={{
-            width: 250,
-            height: 260,
-            borderRadius: 10,
-            border: "solid 1.5px",
-          }}
-        >
-          <Card.Img variant="top" src={TA_1} />
-          <Card.Body
+          <p
             style={{
-              padding: "5px 5px",
+              fontWeight: 700,
+              fontSize: "40px",
+              lineHeight: "48px",
+              paddingLeft: "0px",
             }}
           >
-            <Card.Title
-              style={{
-                fontWeight: 600,
-                fontSize: "16px",
-                textAlign: "left",
-                color: "#000000",
-                padding: "0px 5px",
-              }}
-            >
-              {t("places.to.visit2")}
-            </Card.Title>
-            <Card.Text>
-              <p
-                style={{
-                  fontFamily: "Inter",
-                  fontStyle: "normal",
-                  fontWeight: "400",
-                  fontSize: "14px",
-                  lineHeight: "20px",
-                  textAlign: "left",
-                  padding: "0px 5px",
-                }}
-              >
-                {t("places.to.visit3")}
-              </p>
-
-              <div
-                style={{
-                  fontFamily: "Inter",
-                  fontStyle: "normal",
-                  fontWeight: "400",
-                  fontSize: "14px",
-                  lineHeight: "20px",
-                  textAlign: "left",
-                  padding: "0px 0px",
-                }}
-              >
-                <Rating
-                  name="half-rating-read"
-                  defaultValue={4.9}
-                  precision={0.5}
-                  readOnly
-                  style={{
-                    fontSize: "30px",
-                  }}
-                />
-              </div>
-              <div
-                style={{
-                  fontFamily: "Inter",
-                  fontStyle: "normal",
-                  fontWeight: "400",
-                  fontSize: "14px",
-                  lineHeight: "20px",
-                  textAlign: "left",
-                  padding: "0px 5px",
-                }}
-              >
-                <b>4.9</b> (5,456 {t("places.to.visit4")})
-              </div>
-            </Card.Text>
-          </Card.Body>
-        </Card>
-
-        <Card
-          className="me-4"
+            {t("places.to.visit1")}
+          </p>
+        </div>
+        <div
           style={{
-            width: 250,
-            height: 260,
-            borderRadius: 10,
-            border: "solid 1.5px",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "flex-start",
+            maxWidth: "1800px",
+            textAlign: "center",
+            padding: "0px 0px",
           }}
         >
-          <Card.Img variant="top" src={TA_2} />
-          <Card.Body
+          <Card
+            className="me-4"
             style={{
-              padding: "5px 5px",
+              width: 250,
+              height: 260,
+              borderRadius: 10,
+              border: "solid 1.5px",
             }}
           >
-            <Card.Title
+            <Card.Img variant="top" src={TA_1} />
+            <Card.Body
               style={{
-                fontWeight: 600,
-                fontSize: "16px",
-                textAlign: "left",
-                color: "#000000",
-                padding: "0px 5px",
+                padding: "5px 5px",
               }}
             >
-              {t("places.to.visit5")}
-            </Card.Title>
-            <Card.Text>
-              <p
+              <Card.Title
                 style={{
-                  fontFamily: "Inter",
-                  fontStyle: "normal",
-                  fontWeight: "400",
-                  fontSize: "14px",
-                  lineHeight: "20px",
+                  fontWeight: 600,
+                  fontSize: "16px",
                   textAlign: "left",
+                  color: "#000000",
                   padding: "0px 5px",
                 }}
               >
-                {t("places.to.visit6")}
-              </p>
-
-              <div
-                style={{
-                  fontFamily: "Inter",
-                  fontStyle: "normal",
-                  fontWeight: "400",
-                  fontSize: "14px",
-                  lineHeight: "20px",
-                  textAlign: "left",
-                  padding: "0px 0px",
-                }}
-              >
-                <Rating
-                  name="half-rating-read"
-                  defaultValue={4.8}
-                  precision={0.5}
-                  readOnly
+                {t("places.to.visit2")}
+              </Card.Title>
+              <Card.Text>
+                <p
                   style={{
-                    fontSize: "30px",
+                    fontFamily: "Inter",
+                    fontStyle: "normal",
+                    fontWeight: "400",
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    textAlign: "left",
+                    padding: "0px 5px",
                   }}
-                />
-              </div>
-              <div
-                style={{
-                  fontFamily: "Inter",
-                  fontStyle: "normal",
-                  fontWeight: "400",
-                  fontSize: "14px",
-                  lineHeight: "20px",
-                  textAlign: "left",
-                  padding: "0px 5px",
-                }}
-              >
-                <b>4.8</b> (4,589 {t("places.to.visit7")})
-              </div>
-            </Card.Text>
-          </Card.Body>
-        </Card>
+                >
+                  {t("places.to.visit3")}
+                </p>
 
-        <Card
-          className="me-4"
-          style={{
-            width: 250,
-            height: 260,
-            borderRadius: 10,
-            border: "solid 1.5px",
-          }}
-        >
-          <Card.Img variant="top" src={TA_3} />
-          <Card.Body
+                <div
+                  style={{
+                    fontFamily: "Inter",
+                    fontStyle: "normal",
+                    fontWeight: "400",
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    textAlign: "left",
+                    padding: "0px 0px",
+                  }}
+                >
+                  <Rating
+                    name="half-rating-read"
+                    defaultValue={4.9}
+                    precision={0.5}
+                    readOnly
+                    style={{
+                      fontSize: "30px",
+                    }}
+                  />
+                </div>
+                <div
+                  style={{
+                    fontFamily: "Inter",
+                    fontStyle: "normal",
+                    fontWeight: "400",
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    textAlign: "left",
+                    padding: "0px 5px",
+                  }}
+                >
+                  <b>4.9</b> (5,456 {t("places.to.visit4")})
+                </div>
+              </Card.Text>
+            </Card.Body>
+          </Card>
+
+          <Card
+            className="me-4"
             style={{
-              padding: "5px 5px",
+              width: 250,
+              height: 260,
+              borderRadius: 10,
+              border: "solid 1.5px",
             }}
           >
-            <Card.Title
+            <Card.Img variant="top" src={TA_2} />
+            <Card.Body
               style={{
-                fontWeight: 600,
-                fontSize: "14px",
-                textAlign: "left",
-                color: "#000000",
-                padding: "0px 5px",
+                padding: "5px 5px",
               }}
             >
-              {t("places.to.visit8")}
-            </Card.Title>
-            <Card.Text>
-              <p
+              <Card.Title
                 style={{
-                  fontFamily: "Inter",
-                  fontStyle: "normal",
-                  fontWeight: "400",
-                  fontSize: "14px",
-                  lineHeight: "16px",
+                  fontWeight: 600,
+                  fontSize: "16px",
                   textAlign: "left",
+                  color: "#000000",
                   padding: "0px 5px",
                 }}
               >
-                {t("places.to.visit9")}
-              </p>
-
-              <div
-                style={{
-                  fontFamily: "Inter",
-                  fontStyle: "normal",
-                  fontWeight: "400",
-                  fontSize: "14px",
-                  lineHeight: "20px",
-                  textAlign: "left",
-                  padding: "0px 0px",
-                }}
-              >
-                <Rating
-                  name="half-rating-read"
-                  defaultValue={4.7}
-                  precision={0.5}
-                  readOnly
+                {t("places.to.visit5")}
+              </Card.Title>
+              <Card.Text>
+                <p
                   style={{
-                    fontSize: "30px",
+                    fontFamily: "Inter",
+                    fontStyle: "normal",
+                    fontWeight: "400",
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    textAlign: "left",
+                    padding: "0px 5px",
                   }}
-                />
-              </div>
-              <div
-                style={{
-                  fontFamily: "Inter",
-                  fontStyle: "normal",
-                  fontWeight: "400",
-                  fontSize: "14px",
-                  lineHeight: "20px",
-                  textAlign: "left",
-                  padding: "0px 5px",
-                }}
-              >
-                <b>4.7</b> (3,987 {t("places.to.visit7")})
-              </div>
-            </Card.Text>
-          </Card.Body>
-        </Card>
+                >
+                  {t("places.to.visit6")}
+                </p>
 
-        <Card
-          className="me-4"
-          style={{
-            width: 250,
-            height: 260,
-            borderRadius: 10,
-            border: "solid 1.5px",
-          }}
-        >
-          <Card.Img variant="top" src={TA_4} />
-          <Card.Body
+                <div
+                  style={{
+                    fontFamily: "Inter",
+                    fontStyle: "normal",
+                    fontWeight: "400",
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    textAlign: "left",
+                    padding: "0px 0px",
+                  }}
+                >
+                  <Rating
+                    name="half-rating-read"
+                    defaultValue={4.8}
+                    precision={0.5}
+                    readOnly
+                    style={{
+                      fontSize: "30px",
+                    }}
+                  />
+                </div>
+                <div
+                  style={{
+                    fontFamily: "Inter",
+                    fontStyle: "normal",
+                    fontWeight: "400",
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    textAlign: "left",
+                    padding: "0px 5px",
+                  }}
+                >
+                  <b>4.8</b> (4,589 {t("places.to.visit7")})
+                </div>
+              </Card.Text>
+            </Card.Body>
+          </Card>
+
+          <Card
+            className="me-4"
             style={{
-              padding: "5px 5px",
+              width: 250,
+              height: 260,
+              borderRadius: 10,
+              border: "solid 1.5px",
             }}
           >
-            <Card.Title
+            <Card.Img variant="top" src={TA_3} />
+            <Card.Body
               style={{
-                fontWeight: 600,
-                fontSize: "16px",
-                textAlign: "left",
-                color: "#000000",
-                padding: "0px 5px",
+                padding: "5px 5px",
               }}
             >
-              {t("places.to.visit10")}
-            </Card.Title>
-            <Card.Text>
-              <p
+              <Card.Title
                 style={{
-                  fontFamily: "Inter",
-                  fontStyle: "normal",
-                  fontWeight: "400",
+                  fontWeight: 600,
                   fontSize: "14px",
-                  lineHeight: "20px",
                   textAlign: "left",
+                  color: "#000000",
                   padding: "0px 5px",
                 }}
               >
-                {t("places.to.visit11")}
-              </p>
-
-              <div
-                style={{
-                  fontFamily: "Inter",
-                  fontStyle: "normal",
-                  fontWeight: "400",
-                  fontSize: "14px",
-                  lineHeight: "20px",
-                  textAlign: "left",
-                  padding: "0px 0px",
-                }}
-              >
-                <Rating
-                  name="half-rating-read"
-                  defaultValue={4.9}
-                  precision={0.5}
-                  readOnly
+                {t("places.to.visit8")}
+              </Card.Title>
+              <Card.Text>
+                <p
                   style={{
-                    fontSize: "30px",
+                    fontFamily: "Inter",
+                    fontStyle: "normal",
+                    fontWeight: "400",
+                    fontSize: "14px",
+                    lineHeight: "16px",
+                    textAlign: "left",
+                    padding: "0px 5px",
                   }}
-                />
-              </div>
-              <div
+                >
+                  {t("places.to.visit9")}
+                </p>
+
+                <div
+                  style={{
+                    fontFamily: "Inter",
+                    fontStyle: "normal",
+                    fontWeight: "400",
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    textAlign: "left",
+                    padding: "0px 0px",
+                  }}
+                >
+                  <Rating
+                    name="half-rating-read"
+                    defaultValue={4.7}
+                    precision={0.5}
+                    readOnly
+                    style={{
+                      fontSize: "30px",
+                    }}
+                  />
+                </div>
+                <div
+                  style={{
+                    fontFamily: "Inter",
+                    fontStyle: "normal",
+                    fontWeight: "400",
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    textAlign: "left",
+                    padding: "0px 5px",
+                  }}
+                >
+                  <b>4.7</b> (3,987 {t("places.to.visit7")})
+                </div>
+              </Card.Text>
+            </Card.Body>
+          </Card>
+
+          <Card
+            className="me-4"
+            style={{
+              width: 250,
+              height: 260,
+              borderRadius: 10,
+              border: "solid 1.5px",
+            }}
+          >
+            <Card.Img variant="top" src={TA_4} />
+            <Card.Body
+              style={{
+                padding: "5px 5px",
+              }}
+            >
+              <Card.Title
                 style={{
-                  fontFamily: "Inter",
-                  fontStyle: "normal",
-                  fontWeight: "400",
-                  fontSize: "14px",
-                  lineHeight: "20px",
+                  fontWeight: 600,
+                  fontSize: "16px",
                   textAlign: "left",
+                  color: "#000000",
                   padding: "0px 5px",
                 }}
               >
-                <b>4.9</b> (6,543 {t("places.to.visit7")})
-              </div>
-            </Card.Text>
-          </Card.Body>
-        </Card>
-      </div>
-    </Layout>
-  </div>
-)};
+                {t("places.to.visit10")}
+              </Card.Title>
+              <Card.Text>
+                <p
+                  style={{
+                    fontFamily: "Inter",
+                    fontStyle: "normal",
+                    fontWeight: "400",
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    textAlign: "left",
+                    padding: "0px 5px",
+                  }}
+                >
+                  {t("places.to.visit11")}
+                </p>
+
+                <div
+                  style={{
+                    fontFamily: "Inter",
+                    fontStyle: "normal",
+                    fontWeight: "400",
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    textAlign: "left",
+                    padding: "0px 0px",
+                  }}
+                >
+                  <Rating
+                    name="half-rating-read"
+                    defaultValue={4.9}
+                    precision={0.5}
+                    readOnly
+                    style={{
+                      fontSize: "30px",
+                    }}
+                  />
+                </div>
+                <div
+                  style={{
+                    fontFamily: "Inter",
+                    fontStyle: "normal",
+                    fontWeight: "400",
+                    fontSize: "14px",
+                    lineHeight: "20px",
+                    textAlign: "left",
+                    padding: "0px 5px",
+                  }}
+                >
+                  <b>4.9</b> (6,543 {t("places.to.visit7")})
+                </div>
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </div>
+      </Layout>
+    </div>
+  );
+};
 
 export default PlacesToVisit;

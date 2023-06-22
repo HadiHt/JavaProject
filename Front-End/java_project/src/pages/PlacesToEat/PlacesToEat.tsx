@@ -90,9 +90,7 @@ const PlacesToEat = () => {
     console.log({ startDate });
     console.log({ numberOfPeople });
   }); 
-  return(
-    <div className="home" style={{ backgroundImage: `url(${BannerImage})` }}>
-  });
+ 
   return (
     <div
       className="home"
