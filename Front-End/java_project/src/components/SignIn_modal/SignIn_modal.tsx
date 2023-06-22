@@ -23,6 +23,7 @@ const SignIn_modal = () => {
   const [isLoggedIn, SetIsLoggedIn] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [token, setToken] = useState(""); //
   const [emailUncorrect, setEmailUncorrect] = useState(true);
   const getValue = () => {
     var inputElement = document.getElementById("form5") as HTMLInputElement;
@@ -43,6 +44,7 @@ const SignIn_modal = () => {
           if (res.data != "") {
             setEmailUncorrect(true);
             setUser(res.data);
+            setToken(res.data); //
             SetIsLoggedIn(true);
             console.log(user);
             console.log(emailUncorrect);

@@ -46,7 +46,16 @@ const SignUp = () => {
     }
   };
   return (
-    <div className="home" style={{ backgroundImage: `url(${BannerImage})` }}>
+    <div
+      className="home"
+      style={{
+        backgroundImage: `url(${BannerImage})`,
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+        zIndex: 100,
+      }}
+    >
       <MDBContainer
         fluid
         className="d-flex align-items-center justify-content-center bg-image"
