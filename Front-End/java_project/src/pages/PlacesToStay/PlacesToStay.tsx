@@ -9,7 +9,13 @@ import TPS_3 from "../../assets/TPS_3.png";
 import TPS_4 from "../../assets/TPS_4.png";
 import { MDBIcon } from "mdb-react-ui-kit";
 import Rating from "@mui/material/Rating";
+import { useTranslation } from "react-i18next";
 
+const PlacesToStay = () => {
+  const { t } = useTranslation();
+
+  return(
+  <div className="home" style={{ backgroundImage: `url(${BannerImage})` }}>
 const PlacesToStay = () => (
   <div
     className="home"
@@ -40,7 +46,7 @@ const PlacesToStay = () => (
             paddingLeft: "40px",
           }}
         >
-          Where to stay in Zagreb
+          {t("places.to.stay.1")}
         </p>
         <p
           style={{
@@ -50,21 +56,12 @@ const PlacesToStay = () => (
             paddingLeft: "40px",
           }}
         >
-          Where to stay in Zagreb Zagreb is the capital city of Croatia and a
-          great place to start your Croatian trip. If you too are visiting the
-          Croatian capital city but don’t know where to stay in Zagreb, we share
-          here the best areas to stay in Zagreb and the best Zagreb
-          accommodations in each of these Zagreb neighborhoods.
+          {t("places.to.stay.text1")}
           <br />
           <br />
-          For many years, Zagreb hotels catered almost exclusively to business
-          travelers, but it's not the case any longer. And while, during the
-          summer, Zagreb still remains a transit town that travelers visit for a
-          day or two before heading to the coast, the number of visitors who at
-          least spend a night in Zagreb increases every year. And so do the
-          number and choice of Zagreb accommodation.
+          
         </p>
-
+          {t("places.to.stay.text2")}
         <p
           style={{
             fontWeight: 700,
@@ -73,7 +70,7 @@ const PlacesToStay = () => (
             paddingLeft: "40px",
           }}
         >
-          Top places to stay in Zagreb
+         {t("places.to.stay.2")}
         </p>
       </div>
       <div
@@ -503,5 +500,5 @@ const PlacesToStay = () => (
       </div>
     </Layout>
   </div>
-);
+)};
 export default PlacesToStay;

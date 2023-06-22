@@ -24,37 +24,58 @@ import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 import { getValue } from "@testing-library/user-event/dist/utils";
 import { DropdownComponent } from "dropdown-ii";
+import { useTranslation } from "react-i18next";
 
 const PlacesToEat = () => {
+  const { t } = useTranslation();
   const [startDate, setStartDate] = useState(new Date());
   const [time, setTime] = useState("");
   const [numberOfPeople, setNumberOfPeople] = useState("");
   const [place, setPlace] = useState("");
+  
+  const optionPeople1 = t("eat.optionPeople1");    {t("eat.title1")}
+  const optionPeople2 = t("eat.optionPeople2");
+  const optionPeople3 = t("eat.optionPeople3");
+  const optionPeople4 = t("eat.optionPeople4");
+  const optionPeople5 = t("eat.optionPeople5");
+  const optionTime1 = t("eat.optionTime1");
+  const optionTime2 = t("eat.optionTime2");
+  const optionTime3 = t("eat.optionTime3");
+  const optionTime4 = t("eat.optionTime4");
+  const optionTime5 = t("eat.optionTime5");
+  const optionTime6 = t("eat.optionTime6");
+  const optionTime7 = t("eat.optionTime7");
+  const optionRestaurant1 = t("eat.optionRestaurant1");
+  const optionRestaurant2 = t("eat.optionRestaurant2");
+  const optionRestaurant3 = t("eat.optionRestaurant3");
+  const optionRestaurant4 = t("eat.optionRestaurant4");
+  const optionRestaurant5 = t("eat.optionRestaurant5");
+    
 
   const optionsPeople = [
-    "1 person", // split the translated array
-    "2 people",
-    "3 people",
-    "4 people",
-    "5 people",
+    optionPeople1, // split the translated array
+    optionPeople2,
+    optionPeople3,
+    optionPeople4,
+    optionPeople5,
   ];
 
   const options = [
-    "9-11 AM",
-    "11-1 PM",
-    "1-3 PM",
-    "3-5 PM",
-    "5-7 PM",
-    "7-9 PM",
-    "9-11PM",
+    optionTime1,
+    optionTime2,
+    optionTime3,
+    optionTime4,
+    optionTime5,
+    optionTime6,
+    optionTime7,
   ];
 
   const restourants = [
-    "Pod Zidom Bistro",
-    "Torikaya Ramen Bar",
-    "Sopal",
-    "SOI Fusion Bar",
-    "Konoba Luka",
+    optionRestaurant1,
+    optionRestaurant2,
+    optionRestaurant3,
+    optionRestaurant4,
+    optionRestaurant5,
   ];
 
   const handleTime = (event) => {
@@ -68,6 +89,9 @@ const PlacesToEat = () => {
     console.log({ time });
     console.log({ startDate });
     console.log({ numberOfPeople });
+  }); 
+  return(
+    <div className="home" style={{ backgroundImage: `url(${BannerImage})` }}>
   });
   return (
     <div
@@ -99,7 +123,7 @@ const PlacesToEat = () => {
               lineHeight: "0px",
             }}
           >
-            Zagreb Restaurants
+            {t("eat.title1")}
           </p>
           <p
             style={{
@@ -111,7 +135,7 @@ const PlacesToEat = () => {
               paddingBottom: "10px",
             }}
           >
-            Make free reservation
+            {t("eat.title2")}
           </p>
         </div>
 
@@ -176,7 +200,7 @@ const PlacesToEat = () => {
                       fontSize: "18px",
                     }}
                   >
-                    <option value="">Select an option</option>
+                    <option value="">{t("eat.reservation1")}</option>
                     <option value={options[0]}>{options[0]}</option>
                     <option value={options[1]}>{options[1]}</option>
                     <option value={options[2]}>{options[2]}</option>
@@ -214,7 +238,7 @@ const PlacesToEat = () => {
                       fontSize: "18px",
                     }}
                   >
-                    <option value="">Select an option</option>
+                    <option value="">{t("eat.reservation1")}</option>
                     <option value={optionsPeople[0]}>{optionsPeople[0]}</option>
                     <option value={optionsPeople[1]}>{optionsPeople[1]}</option>
                     <option value={optionsPeople[2]}>{optionsPeople[2]}</option>
@@ -250,7 +274,7 @@ const PlacesToEat = () => {
                       fontSize: "18px",
                     }}
                   >
-                    <option value="">Restaurant</option>
+                    <option value="">{t("eat.reservation2")}</option>
                     <option value={restourants[0]}>{restourants[0]}</option>
                     <option value={restourants[1]}>{restourants[1]}</option>
                     <option value={restourants[2]}>{restourants[2]}</option>
@@ -275,7 +299,7 @@ const PlacesToEat = () => {
               borderRadius: "20px",
             }}
           >
-            Let's go
+            {t("eat.reservation3")}
           </Button>
         </div>
 
@@ -296,16 +320,10 @@ const PlacesToEat = () => {
               lineHeight: "48px",
             }}
           >
-            Best Croatian Food and Dishes You Need to Try
+            {t("eat.title3")}
           </p>
           <p>
-            When in Croatia, eat like a Croatian…and we promise you’ll be richly
-            rewarded! Croatia is a gourmand’s dream, with one of the best – and
-            most underrated – cuisines in Europe. With its many miles of
-            coastline, seafood is an obvious highlight, but you’ll also find
-            succulent meats and hearty stews across inland destinations. A
-            Mediterranean climate sees Croatia produce high-quality ingredients,
-            with wine, olive oil, and truffles all noted highlights.
+          {t("eat.text1")}
           </p>
 
           <p
@@ -315,7 +333,7 @@ const PlacesToEat = () => {
               lineHeight: "48px",
             }}
           >
-            Top places to eat tonight in Zagreb
+            {t("eat.title4")}
           </p>
         </div>
         <div
@@ -337,7 +355,7 @@ const PlacesToEat = () => {
               border: "solid 1.5px",
             }}
           >
-            <Card.Img variant="top" src={TP_1} />
+            <Card.Img constiant="top" src={TP_1} />
             <Card.Body
               style={{
                 padding: "5px 5px",
@@ -477,7 +495,7 @@ const PlacesToEat = () => {
               border: "solid 1.5px",
             }}
           >
-            <Card.Img variant="top" src={TP_2} />
+            <Card.Img constiant="top" src={TP_2} />
             <Card.Body
               style={{
                 padding: "5px 5px",
@@ -616,7 +634,7 @@ const PlacesToEat = () => {
               border: "solid 1.5px",
             }}
           >
-            <Card.Img variant="top" src={TP_3} />
+            <Card.Img constiant="top" src={TP_3} />
             <Card.Body
               style={{
                 padding: "5px 5px",
@@ -756,7 +774,7 @@ const PlacesToEat = () => {
               border: "solid 1.5px",
             }}
           >
-            <Card.Img variant="top" src={TP_4} />
+            <Card.Img constiant="top" src={TP_4} />
             <Card.Body
               style={{
                 padding: "5px 5px",

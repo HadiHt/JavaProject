@@ -5,8 +5,12 @@ import "./HomePage.css";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Rectangle from "../../assets/Rectangle 9.png";
+import { useTranslation } from "react-i18next";
 
-const HomePage = () => (
+const HomePage = () => {
+  const { t } = useTranslation();
+
+  return(
   <div
     className="home"
     style={{
@@ -38,11 +42,10 @@ const HomePage = () => (
         }}
       >
         <p style={{ fontWeight: 700, fontSize: "40px", lineHeight: "48px" }}>
-          Explore Zagreb with us
+          {t("sentence1")}
         </p>
         <p style={{ fontWeight: 500, fontSize: "16px", lineHeight: "20px" }}>
-          Zagreb – city with a million hearts and amazing food. Book place to
-          eat here.
+          {t("sentence2")}
         </p>
       </div>
       <div
@@ -75,7 +78,7 @@ const HomePage = () => (
                 color: "#000000",
               }}
             >
-              Place to visit
+              {t("sentence3")}
               <hr />
             </Card.Title>
             <Card.Text
@@ -88,9 +91,7 @@ const HomePage = () => (
                 textAlign: "left",
               }}
             >
-              Explore the best of Zagreb! From historic landmarks to trendy
-              neighborhoods, find out what to see in Zagreb with our 2023
-              attractions guide.
+              {t("sentence4")}
             </Card.Text>
           </Card.Body>
         </Card>
@@ -116,7 +117,7 @@ const HomePage = () => (
                 color: "#000000",
               }}
             >
-              Public transport
+              {t("sentence5")}
               <hr />
             </Card.Title>
             <Card.Text
@@ -129,9 +130,7 @@ const HomePage = () => (
                 textAlign: "left",
               }}
             >
-              Zagreb's public transportation system is called ZET. It is
-              abbreviated from Zagrebački električni tramvaj (Zagreb electric
-              tram).
+              {t("sentence6")}
             </Card.Text>
           </Card.Body>
         </Card>
@@ -157,7 +156,7 @@ const HomePage = () => (
                 color: "#000000",
               }}
             >
-              Place to eat
+              {t("sentence7")}
               <hr />
             </Card.Title>
             <Card.Text
@@ -170,8 +169,7 @@ const HomePage = () => (
                 textAlign: "left",
               }}
             >
-              The best Zagreb restaurants: our guide on where to eat in Zagreb
-              for every budget and lifestyle, including locals favourite places.
+              {t("sentence8")}
             </Card.Text>
           </Card.Body>
         </Card>
@@ -197,7 +195,7 @@ const HomePage = () => (
                 color: "#000000",
               }}
             >
-              Place to stay
+              {t("sentence9")}
               <hr />
             </Card.Title>
             <Card.Text
@@ -210,14 +208,13 @@ const HomePage = () => (
                 textAlign: "left",
               }}
             >
-              Discover place zo stay at Visit Zagreb and make your next stay
-              truly unique! Escape to anywhere, anytime on Visit Zagreb!
+              {t("sentence10")}
             </Card.Text>
           </Card.Body>
         </Card>
       </div>
     </div>
   </div>
-);
+)};
 
 export default HomePage;
