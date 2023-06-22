@@ -9,9 +9,11 @@ import PublicTransport from "./pages/PublicTransport/PublicTransport.tsx";
 import SignUp from "./pages/SignUp/SignUp.tsx";
 import SignIn from "./pages/SignIn/SignIn.tsx";
 import ContextWrapper from "./contexts/contextWrapper";
-
+import { I18nextProvider } from "react-i18next";
+import i18n from "./i18n";
 function App() {
   return (
+    <I18nextProvider i18n={i18n}>
     <div className="App">
       <ContextWrapper>
         <Navbar_ />
@@ -37,10 +39,15 @@ function App() {
             path="/publictransport"
             element={<PublicTransport></PublicTransport>}
           ></Route>
-          <Route exact path="/signup" element={<SignUp></SignUp>}></Route>
+          <Route 
+            exact 
+            path="/signup" 
+            element={<SignUp></SignUp>}>
+          </Route>
         </Routes>
       </ContextWrapper>
     </div>
+    </I18nextProvider>
   );
 }
 
