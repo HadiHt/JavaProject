@@ -9,11 +9,16 @@ import Nav from "react-bootstrap/Nav";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import SignIn_modal from "../SignIn_modal/SignIn_modal.tsx";
 import { useState } from "react";
+import LanguageSwitcher from "../../LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 
 function Navbar_() {
+  const { t, i18n } = useTranslation();
+  
   return (
     <Navbar className="fixed-top shadow-none p-5" expand="lg">
       <Container fluid>
+      
         <Navbar.Brand href="/">
           <img src={Logo} />
         </Navbar.Brand>
@@ -29,7 +34,7 @@ function Navbar_() {
               className="mx-4"
               style={{ fontSize: 20, color: "black", fontWeight: "bold" }}
             >
-              Places to visit
+             {t("places.to.visit")}
             </Nav.Link>
 
             <Nav.Link
@@ -37,7 +42,7 @@ function Navbar_() {
               className="mx-4"
               style={{ fontSize: 20, color: "black", fontWeight: "bold" }}
             >
-              Public transport
+              {t("public.transportation")}
             </Nav.Link>
 
             <Nav.Link
@@ -45,14 +50,14 @@ function Navbar_() {
               className="mx-4"
               style={{ fontSize: 20, color: "black", fontWeight: "bold" }}
             >
-              Places to eat
+              {t("places.to.eat")}
             </Nav.Link>
             <Nav.Link
               href="/placestostay"
               className="mx-4"
               style={{ fontSize: 20, color: "black", fontWeight: "bold" }}
             >
-              Places to stay
+              {t("places.to.stay")}
             </Nav.Link>
           </Nav>
           <Form className="d-flex">
@@ -65,8 +70,9 @@ function Navbar_() {
             <SignIn_modal></SignIn_modal>
 
             <Link to="/signup">
-              <Button variant="dark">Register</Button>
+              <Button variant="dark">{t("register")}</Button>
             </Link>
+            <LanguageSwitcher />
           </Form>
         </Navbar.Collapse>
       </Container>

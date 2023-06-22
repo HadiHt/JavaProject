@@ -5,7 +5,7 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import "./SignIn.css";
 import axios from "axios";
 import { userContext } from "../../contexts/userContext";
-
+import { useTranslation } from "react-i18next";
 import {
   MDBBtn,
   MDBContainer,
@@ -17,12 +17,15 @@ import {
   MDBCol,
   MDBIcon,
 } from "mdb-react-ui-kit";
+import cookies from "js-cookie";
 
 const SignIn_modal = () => {
+  const { t } = useTranslation();
   const { user, setUser } = useContext(userContext);
   const [isLoggedIn, SetIsLoggedIn] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [token, setToken] = useState(""); //
   const [emailUncorrect, setEmailUncorrect] = useState(true);
   const getValue = () => {
     var inputElement = document.getElementById("form5") as HTMLInputElement;
@@ -43,10 +46,14 @@ const SignIn_modal = () => {
           if (res.data != "") {
             setEmailUncorrect(true);
             setUser(res.data);
+            setToken(res.data); //
             SetIsLoggedIn(true);
             console.log(user);
             console.log(emailUncorrect);
             setShow(!show);
+            //cokies
+            //cookies.set("token", "tokenValue", { expires: 1 });
+            console.log(res.data);
           } else {
             setEmailUncorrect(false);
             console.log(emailUncorrect);
@@ -112,10 +119,8 @@ const SignIn_modal = () => {
                       aria-label="Close"
                       style={{ float: "right" }}
                     ></button>
-                    <h2 className=" text-center mb-5">Sign in</h2>
-                    <p className="text-white-50 mb-3">
-                      Please enter your login and password!
-                    </p>
+                    <h2 className=" text-center mb-5">{t("signIn1")}</h2>
+                    <p className="text-white-50 mb-3">{t("signUp6")}</p>
                     <div className="inputContainer">
                       <input
                         style={{
@@ -127,7 +132,7 @@ const SignIn_modal = () => {
                         }}
                         id="form5"
                         type="text"
-                        placeholder="Your Email"
+                        placeholder={t("signUp4")}
                       />
                       <input
                         style={{
@@ -139,14 +144,14 @@ const SignIn_modal = () => {
                         }}
                         id="form6"
                         type="text"
-                        placeholder="Your Password"
+                        placeholder={t("signUp5")}
                       />
                     </div>
                     <MDBCheckbox
                       name="flexCheck"
                       id="flexCheckDefault"
                       className="mb-4"
-                      label="Remember password"
+                      label={t("signIn2")}
                     />
                     {!emailUncorrect && (
                       <div
@@ -158,11 +163,11 @@ const SignIn_modal = () => {
                           padding: "10px",
                         }}
                       >
-                        Uncorrect Credentials
+                        {t("signIn5")}
                       </div>
                     )}
                     <MDBBtn size="lg" onClick={getValue}>
-                      Login
+                      {t("signIn3")}
                     </MDBBtn>
                     <Button
                       variant="outline-dark"
@@ -172,7 +177,7 @@ const SignIn_modal = () => {
                         paddingTop: 0,
                       }}
                     >
-                      Close
+                      {t("signIn4")}
                     </Button>
                   </MDBCardBody>
                 </MDBCard>
