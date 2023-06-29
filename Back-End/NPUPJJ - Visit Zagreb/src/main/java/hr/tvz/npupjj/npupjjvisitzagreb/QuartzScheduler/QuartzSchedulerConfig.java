@@ -13,10 +13,10 @@ public class QuartzSchedulerConfig {
                 JobBuilder.newJob(DatabaseConnectionCheckJob.class).withIdentity("databaseConnectionCheckJob").storeDurably().build();
     }
     @Bean
-    public Trigger objavaJobTrigger() {
+    public Trigger databaseConnectionCheckJobTrigger() {
         SimpleScheduleBuilder scheduleBuilder = SimpleScheduleBuilder.simpleSchedule()
                 .withIntervalInSeconds(10).repeatForever();
         return TriggerBuilder.newTrigger().forJob(databaseConnectionCheckJob())
-                .withIdentity("databaseConnectionCheckJob").withSchedule(scheduleBuilder).build();
+                .withIdentity("databaseConnectionCheckJobTrigger").withSchedule(scheduleBuilder).build();
     }
 }
