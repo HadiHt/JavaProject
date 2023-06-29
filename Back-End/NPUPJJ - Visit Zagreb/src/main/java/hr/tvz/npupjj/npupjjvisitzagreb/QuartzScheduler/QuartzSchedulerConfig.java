@@ -17,6 +17,6 @@ public class QuartzSchedulerConfig {
         SimpleScheduleBuilder scheduleBuilder = SimpleScheduleBuilder.simpleSchedule()
                 .withIntervalInSeconds(10).repeatForever();
         return TriggerBuilder.newTrigger().forJob(databaseConnectionCheckJob())
-                .withIdentity("objavaTrigger").withSchedule(scheduleBuilder).build();
+                .withIdentity("databaseConnectionCheckJob").withSchedule(scheduleBuilder).build();
     }
 }
