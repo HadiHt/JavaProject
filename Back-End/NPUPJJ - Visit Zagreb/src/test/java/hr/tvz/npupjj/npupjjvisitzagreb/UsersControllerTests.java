@@ -81,7 +81,7 @@ public class UsersControllerTests {
         when(userService.getUserById(any(Long.class))).thenReturn(null);
 
         mockMvc.perform(get("/User/{id}", 1))
-                .andExpect(status().is2xxSuccessful());
+                .andExpect(status().is4xxClientError());
     }
 
     @Test
